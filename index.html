@@ -1,4 +1,137 @@
-<!DOCTYPE>
+<!DOCTYPE html>
+<html lang="ro">
 <head>
-    <title>Jhon</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica de inițiere</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #4c56af;
+            padding: 15px;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .top-left {
+            position: absolute;
+            top: 70px;
+            left: 10px;
+        }
+        .top-right {
+            position: absolute;
+            top: 70x;
+            right: 10px;
+        }
+        .bottom-left {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+        }
+        .bottom-right {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 60px;
+            gap: 10px;
+        }
+        .text-box {
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 200px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-btn {
+            padding: 15px;
+            background-color: #ece3e5;
+            color: rgb(86, 60, 60);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .date-box input {
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .images {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            gap: 20px;
+        }
+        .images img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+    </style>
 </head>
+<body>
+    <div class="navbar">Practica de inițiere</div>
+    <div class="top-left">Ion</div>
+    <div class="top-right">Ion</div>
+    <div class="bottom-left">Ion</div>
+    <div class="bottom-right">Ion</div>
+    <div class="container">
+        <div class="text-box">
+            Acesta este un text demonstrativ în caseta din stânga.
+        </div>
+        <div class="dropdown">
+            <button class="dropdown-btn">Opțiuni</button>
+            <div class="dropdown-content">
+                <a href="#">Opțiunea 1</a>
+                <a href="#">Opțiunea 2</a>
+                <a href="#">Opțiunea 3</a>
+                <a href="#">Opțiunea 4</a>
+            </div>
+        </div>
+        <div class="date-box">
+            <input type="date">
+        </div>
+    </div>
+    <div class="images">
+        <img src="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2023/10/25/16982501719518.jpg" alt="Imagine 1">
+        <img src="https://pbs.twimg.com/media/GiJVebWWcAAA3aR?format=jpg&name=large" alt="Imagine 2">
+        <img src="https://pbs.twimg.com/media/GiJVebMWMAAlMcy?format=jpg&name=large" alt="Imagine 3">
+    </div>
+    <input type="checkbox" > Varianta corecta
+    <br> </br>
+   <input type="checkbox">Raspuns corect 
+</body>
+</html>
