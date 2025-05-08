@@ -1,170 +1,173 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practica de inițiere</title>
+    <title>eLearning CUTM</title>
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
         }
-        .navbar {
-            background-color: #4c56af;
-            padding: 15px;
-            text-align: center;
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
+        body {
+            background-color: #fff;
+            color: #333;
         }
-        .top-left {
-            position: absolute;
-            top: 70px;
-            left: 10px;
-        }
-        .top-right {
-            position: absolute;
-            top: 70x;
-            right: 10px;
-        }
-        .bottom-left {
-            position: absolute;
-            bottom: 10px;
-            left: 10px;
-        }
-        .bottom-right {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-        }
-        .container {
+        header {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            margin-top: 60px;
-            gap: 10px;
+            padding: 20px 60px;
+            background: #fff;
+            border-bottom: 1px solid #eee;
         }
-        .text-box {
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            width: 200px;
+        header h1 {
+            font-size: 22px;
+            font-weight: 700;
         }
-        .dropdown {
-            position: relative;
-            display: inline-block;
+        header h1 span {
+            color: #ff6a00;
         }
-        .dropdown-btn {
-            padding: 15px;
-            background-color: #ece3e5;
-            color: rgb(86, 60, 60);
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+        nav a:hover {
+            color: #ff6a00;
+        }
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px 60px 40px;
+            background: linear-gradient(to right, #fff6d6, #ccf2e9);
+        }
+        .hero-text {
+            max-width: 45%;
+        }
+        .hero-text h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .hero-text p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .hero-text button {
+            padding: 12px 25px;
+            background-color: #ff6a00;
             border: none;
+            color: #fff;
+            font-weight: 600;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 2px;
+        }
+        .hero-img img {
+            max-height: 400px;
+            width: auto;
+            border-radius: 10px;
+        }
+        .categories {
+            text-align: center;
+            padding: 40px 20px 80px;
+        }
+        .categories h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .categories p {
+            font-size: 16px;
+            color: #777;
+        }
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 40px 0;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .category-card {
+            border: 1px solid #eee;
+            border-radius: 12px;
+            padding: 30px 20px;
+            transition: 0.3s;
+            background: #fff;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .category-card:hover {
+            border-color: #ff6a00;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.05);
+        }
+        .category-card::before {
+            content: '\1F4D6'; 
+            display: block;
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #ff6a00;
+        }
+        .btn-outline {
+            padding: 10px 18px;
+            border: 1px solid #000;
             border-radius: 5px;
+            background: none;
+            font-weight: 500;
+            margin-top: 10px;
             cursor: pointer;
         }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        .date-box input {
-            padding: 14px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        .images {
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
-            gap: 20px;
-        }
-        .images img {
-            width: 200px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 5px;
-        }
-        .round-checkbox {
-      appearance: none;
-      -webkit-appearance: none;
-      background-color: white;
-      border: 2px solid #555;
-      border-radius: 50%;
-      width: 20px;
-      height: 20px;
-      cursor: pointer;
-      outline: none;
-      display: inline-block;
-      position: relative;
-    }
-
-    .round-checkbox:checked {
-      background-color: #2196F3;
-      border: 2px solid #2196F3;
-    }
-
-    .round-checkbox:checked::after {
-      content: "";
-      position: absolute;
-      top: 4px;
-      left: 4px;
-      width: 8px;
-      height: 8px;
-      background-color: white;
-      border-radius: 50%;
-    }
     </style>
 </head>
 <body>
-    <div class="navbar">Practica de inițiere</div>
-    <div class="top-left">Ion</div>
-    <div class="top-right">Ion</div>
-    <div class="bottom-left">Ion</div>
-    <div class="bottom-right">Ion</div>
-    <div class="container">
-        <div class="text-box">
-            Acesta este un text demonstrativ în caseta din stânga.
+    <header>
+        <h1><span>e</span>Learning CUTM</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="index1.html">Courses</a>
+            <a href="#">Blog</a>
+            <a href="#">Pages</a>
+            <a href="#">LearnPress Add-On</a>
+            <a href="#">Premium Theme</a>
+            <a href="#">Login / Register</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Build Skills With<br>Online Course</h2>
+            <p>We denounce with righteous indignation and dislike men who are so beguiled and demoralized that cannot trouble.</p>
+            <button>Posts Comment</button>
         </div>
-        <div class="dropdown">
-            <button class="dropdown-btn">Opțiuni</button>
-            <div class="dropdown-content">
-                <a href="#">Opțiunea 1</a>
-                <a href="#">Opțiunea 2</a>
-                <a href="#">Opțiunea 3</a>
-                <a href="#">Opțiunea 4</a>
-            </div>
+        <div class="hero-img">
+            <img src="https://img.favpng.com/8/20/25/jon-jones-ufc-214-cormier-vs-jones-2-ufc-145-jones-vs-evans-light-heavyweight-mixed-martial-arts-png-favpng-42KY6X4M05aKZ9zCrAQXWqn1p.jpg" alt="Online School Girl">
         </div>
-        <div class="date-box">
-            <input type="date">
+    </section>
+    <section class="categories">
+        <h2>Top Categories</h2>
+        <p>Explore our Popular Categories</p>
+        <div class="category-grid">
+            <div class="category-card">Art & Design<br><small>38 Courses</small></div>
+            <div class="category-card">Development<br><small>38 Courses</small></div>
+            <div class="category-card">Communication<br><small>38 Courses</small></div>
+            <div class="category-card">Videography<br><small>38 Courses</small></div>
+            <div class="category-card">Photography<br><small>38 Courses</small></div>
+            <div class="category-card">Marketing<br><small>38 Courses</small></div>
+            <div class="category-card">Content Writing<br><small>38 Courses</small></div>
+            <div class="category-card">Finance<br><small>38 Courses</small></div>
+            <div class="category-card">Science<br><small>38 Courses</small></div>
+            <div class="category-card">Network<br><small>38 Courses</small></div>
         </div>
-    </div>
-    <div class="images">
-        <img src="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2023/10/25/16982501719518.jpg" alt="Imagine 1">
-        <img src="https://pbs.twimg.com/media/GiJVebWWcAAA3aR?format=jpg&name=large" alt="Imagine 2">
-        <img src="https://pbs.twimg.com/media/GiJVebMWMAAlMcy?format=jpg&name=large" alt="Imagine 3">
-    </div>
-    <input type="checkbox" > Varianta corecta
-    <br> </br>
-    <label>
-        <input type="checkbox" class="round-checkbox">
-        Option 1
-      </label>
-   
+        <button class="btn-outline">All Categories</button>
+    </section>
 </body>
 </html>

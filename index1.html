@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Courses</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Header -->
+  <header class="bg-white shadow p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">All Courses</h1>
+    <input type="text" placeholder="Search..." class="border rounded px-4 py-1">
+  </header>
+
+  <!-- Main Layout -->
+  <div class="flex max-w-7xl mx-auto mt-6 px-4">
+    <!-- Sidebar Filters -->
+    <aside class="w-1/4 pr-4">
+      <h2 class="text-xl font-semibold mb-2">Course Category</h2>
+      <ul class="mb-6">
+        <li><input type="checkbox"> Commercial</li>
+        <li><input type="checkbox"> Office</li>
+        <li><input type="checkbox"> Strategy</li>
+        <li><input type="checkbox"> Education</li>
+      </ul>
+      <h2 class="text-xl font-semibold mb-2">Price</h2>
+      <ul class="mb-6">
+        <li><input type="checkbox"> Free</li>
+        <li><input type="checkbox"> Paid</li>
+      </ul>
+      <h2 class="text-xl font-semibold mb-2">Level</h2>
+      <ul>
+        <li><input type="checkbox"> All Levels</li>
+        <li><input type="checkbox"> Beginner</li>
+        <li><input type="checkbox"> Intermediate</li>
+        <li><input type="checkbox"> Expert</li>
+      </ul>
+    </aside>
+
+    <!-- Course Listings -->
+    <main class="w-3/4">
+      <!-- Course Card -->
+      <div class="bg-white rounded-lg shadow mb-6 overflow-hidden flex">
+        <img src="https://via.placeholder.com/200x150" alt="Course Image" class="w-48 h-auto">
+        <div class="p-4 flex flex-col justify-between">
+          <div>
+            <span class="text-sm bg-red-500 text-white px-2 py-1 rounded">Photography</span>
+            <h3 class="text-xl font-semibold mt-2">Create An LMS Website With LearnPress</h3>
+            <p class="text-gray-600 text-sm mt-1">By Dorianne Pitruza</p>
+          </div>
+          <div class="text-sm mt-2">
+            <span>20 Weeks</span> • <span>150 Students</span> • <span>All Levels</span> • <span>30 Lessons</span>
+          </div>
+          <div class="mt-2">
+            <span class="text-green-600 font-bold">Free</span>
+            <a href="#" class="text-blue-600 hover:underline ml-4">View More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Duplicate this card as needed -->
+
+      <!-- Pagination -->
+      <div class="flex justify-center space-x-2 mt-6">
+        <button class="px-3 py-1 bg-gray-300 rounded">1</button>
+        <button class="px-3 py-1 bg-white border border-gray-400 rounded">2</button>
+        <button class="px-3 py-1 bg-white border border-gray-400 rounded">3</button>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
