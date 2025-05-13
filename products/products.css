@@ -79,13 +79,11 @@
     width: 100%;
     height: auto;
     padding: 80px 10%;
-    /* background-color: cyan; */
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-/* This css will implement all the Heading of all section  */
 .head_text{
     font-size: 28px;
     font-family: Merienda;
@@ -135,10 +133,6 @@
     font-size: 14px;
     opacity: .9;
 }
-
-
-
-
 
 /* -------- New Arrival Section CSS -------- */
 
