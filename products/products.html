@@ -1,292 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Famms - The Fashion Store</title>
-        <link rel="stylesheet" href="products.css">
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Famms - The Fashion Store</title>
+  <link rel="stylesheet" href="products.css">
+</head>
 
-    <body>
-        <!-- -------- Navbar Section -------- -->
-        <div class="navbar">
-            <div class="logo">
-                <img src= "mma.png" alt="Logo Image" width="145px">
-            </div>
-            <ul class="navlinks">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#Testimonial">Testimonials</a></li>
-                <li><a href="file:///C:/Users/user/Desktop/ziua1/Login/login.html">Log in</a></li>
-           <li><a href="file:///C:/Users/user/Desktop/ziua1/logout/logout.html">Log out</a></li>
-           <li><a href="file:///C:/Users/user/Desktop/ziua1/register/register.html#Log%20out">Register</a></li>
-            <li><a href="file:///C:/Users/user/Desktop/ziua1/Page.html" target="_blank">Home Page</a></li>
-                </li>
-                <li><a href="./contact.html">Contact</a></li>
-                <li>
-                    <ion-icon name="cart"></ion-icon>
-                </li>
-                <li>
-                    <ion-icon name="search"></ion-icon>
-                </li>
-            </ul>
-        </div>
+<body>
+  <div id="navbar"></div>
+  <script>
+    fetch('../components/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      })
+      .catch(error => console.error('Eroare la încărcarea navbar-ului:', error));
+  </script>
 
+  <!--Poster Section-->
+  <section class="poster">
+    <h3 class="poster_heading head_text">Why Shop with Us</h3>
+    <div class="poster_wrapper">
+      <div class="poster_card">
+        <img src="quality.png.png" class="icon">
+        <h4>Free Delivery</h4>
+        <p>Free Delivery will give to Our Customer</p>
+      </div>
+      <div class="poster_card">
+        <img src="car.png.png" class="icon">
+        <h4>Free Shipping</h4>
+        <p>Free Shipping will give to Our Customer</p>
+      </div>
+      <div class="poster_card">
+        <img src="car1.png.png" class="icon">
+        <h4>Best Quality</h4>
+        <p>You will get Best Quality Products</p>
+      </div>
+    </div>
+  </section>
 
-        <!-- -------- Home Section -------- -->
-        <section class="home_section" id="home">
-            <div class="home_container">
-                <h3 class="heading">Sale 20% Off<br><span>On Everything</span></h3>
-                <p class="home_para1">We provide high quality fashion items for men, women and children. Our products
-                    are timeless, unique and stylish. We offer a wide range of minimalist print products in different
-                    styles and sizes.</p>
-                <p class="home_para2">Our mission is to become the go-to store for customers who are looking for high
-                    quality fashion products. With our products being affordable and highly accessible, we believe that
-                    we can help our customers create and express their own style</p>
-                <a href="#products" class="home_btn btn">Shop Now</a>
-            </div>
-        </section>
-
-
-        <!-- -------- Poster Section -------- -->
-        <section class="poster">
-            <h3 class="poster_heading head_text">Why Shop with Us</h3>
-            <div class="poster_wrapper">
-                <div class="poster_card">
-                    <img src="quality.png" class="icon">
-                    <h4>Free Delivery</h4>
-                    <p>Free Delivery will give to Our Customer</p>
-                </div>
-                <div class="poster_card">
-                    <img src="car.png" class="icon">
-                    <h4>Free Shipping</h4>
-                    <p>Free Shipping will give to Our Customer</p>
-                </div>
-                <div class="poster_card">
-                    <img src="car1.png" class="icon">
-                    <h4>Best Quality</h4>
-                    <p>You will get Best Quality Products</p>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- -------- New Arrival Section -------- -->
-        <section class="new_arrival">
-            <div class="arrival_container">
-                <h3 class="heading">#NewArrivals</h3>
-                <p>Our mission is to become the go-to store for customers who are looking for high quality fashion
-                    products. With our products being affordable and highly accessible, we believe that we can help our
-                    customers create and express their own style</p>
-                <a href="#products" class="btn arrival_btn">Shop Now</a>
-            </div>
-        </section>
-
-
-        <!-- -------- Our Products Section -------- -->
-        <section class="our_products" id="products">
-            <h3 class="product_heading head_text">Our <span>Products</span></h3>
-
-            <div class="products_container">
-                <div class="product_card">
-                    <div class="img">
-                        <img src="../img/p1.png" width="140px">
-                    </div>
-                    <div class="details">
-                        <p class="name">Men's Shirt</p>
-                        <p class="price">$75</p>
-                    </div>
-                    <div class="buttons">
-                        <a href="#" class="addTO_cart">Add To Cart</a>
-                        <a href="#" class="buy_now">Buy Now</a>
-                    </div>
-                </div>
-                <div class="product_card">
-                    <div class="img">
-                        <img src="../img/p2.png" width="140px">
-                    </div>
-                    <div class="details">
-                        <p class="name">Men's Shirt</p>
-                        <p class="price">$75</p>
-                    </div>
-                    <div class="buttons">
-                        <a href="#" class="addTO_cart">Add To Cart</a>
-                        <a href="#" class="buy_now">Buy Now</a>
-                    </div>
-                </div>
-                <div class="product_card">
-                    <div class="img">
-                        <img src="../img/p3.png" width="140px">
-                    </div>
-                    <div class="details">
-                        <p class="name">Women's Dress</p>
-                        <p class="price">$75</p>
-                    </div>
-                    <div class="buttons">
-                        <a href="#" class="addTO_cart">Add To Cart</a>
-                        <a href="#" class="buy_now">Buy Now</a>
-                    </div>
-                </div>
-                <div class="product_card">
-                    <div class="img">
-                        <img src="../img/p4.png" width="140px">
-                    </div>
-                    <div class="details">
-                        <p class="name">Women's Dress</p>
-                        <p class="price">$75</p>
-                    </div>
-                    <div class="buttons">
-                        <a href="#" class="addTO_cart">Add To Cart</a>
-                        <a href="#" class="buy_now">Buy Now</a>
-                    </div>
-                </div>
-                <div class="product_card">
-                    <div class="img">
-                        <img src="../img/p5.png" width="140px">
-                    </div>
-                    <div class="details">
-                        <p class="name">Women's Dress</p>
-                        <p class="price">$75</p>
-                    </div>
-                    <div class="buttons">
-                        <a href="#" class="addTO_cart">Add To Cart</a>
-                        <a href="#" class="buy_now">Buy Now</a>
-                    </div>
-                </div>
-                <div class="product_card">
-                    <div class="img">
-                        <img src="../img/p6.png" width="140px">
-                    </div>
-                    <div class="details">
-                        <p class="name">Women's Dress</p>
-                        <p class="price">$75</p>
-                    </div>
-                    <div class="buttons">
-                        <a href="#" class="addTO_cart">Add To Cart</a>
-                        <a href="#" class="buy_now">Buy Now</a>
-                    </div>
-                </div>
-                <div class="product_card">
-                    <div class="img">
-                        <img src="../img/p7.png" width="140px">
-                    </div>
-                    <div class="details">
-                        <p class="name">Women's Dress</p>
-                        <p class="price">$75</p>
-                    </div>
-                    <div class="buttons">
-                        <a href="#" class="addTO_cart">Add To Cart</a>
-                        <a href="#" class="buy_now">Buy Now</a>
-                    </div>
-                </div>
-                <div class="product_card">
-                    <div class="img">
-                        <img src="../img/p8.png" width="140px">
-                    </div>
-                    <div class="details">
-                        <p class="name">Men's Shirt</p>
-                        <p class="price">$75</p>
-                    </div>
-                    <div class="buttons">
-                        <a href="#" class="addTO_cart">Add To Cart</a>
-                        <a href="#" class="buy_now">Buy Now</a>
-                    </div>
-                </div>
-                <div class="product_card">
-                    <div class="img">
-                        <img src="../img/p9.png" width="140px">
-                    </div>
-                    <div class="details">
-                        <p class="name">Men's Shirt</p>
-                        <p class="price">$75</p>
-                    </div>
-                    <div class="buttons">
-                        <a href="#" class="addTO_cart">Add To Cart</a>
-                        <a href="#" class="buy_now">Buy Now</a>
-                    </div>
-                </div>
-                <div class="product_card">
-                    <div class="img">
-                        <img src="../img/p10.png" width="140px">
-                    </div>
-                    <div class="details">
-                        <p class="name">Men's Shirt</p>
-                        <p class="price">$75</p>
-                    </div>
-                    <div class="buttons">
-                        <a href="#" class="addTO_cart">Add To Cart</a>
-                        <a href="#" class="buy_now">Buy Now</a>
-                    </div>
-                </div>
-                <div class="product_card">
-                    <div class="img">
-                        <img src="../img/p11.png" width="140px">
-                    </div>
-                    <div class="details">
-                        <p class="name">Men's Shirt</p>
-                        <p class="price">$75</p>
-                    </div>
-                    <div class="buttons">
-                        <a href="#" class="addTO_cart">Add To Cart</a>
-                        <a href="#" class="buy_now">Buy Now</a>
-                    </div>
-                </div>
-                <div class="product_card">
-                    <div class="img">
-                        <img src="../img/p12.png" width="140px">
-                    </div>
-                    <div class="details">
-                        <p class="name">Women's Dress</p>
-                        <p class="price">$75</p>
-                    </div>
-                    <div class="buttons">
-                        <a href="#" class="addTO_cart">Add To Cart</a>
-                        <a href="#" class="buy_now">Buy Now</a>
-                    </div>
-                </div>
-            </div>
-            <a href="./product.html" class="view_allButton btn">View All</a>
-        </section>
-
-
-        <!-- -------- Subscribe Letter Section -------- -->
-        <section class="subscribe_letter">
-            <h3 class="sub_heading head_text">Subscribe to Get Discount Offers</h3>
-            <p>Subscribe to our newsletter and get updated on trending news, styles and sales.</p>
-            <div class="input_box">
-                <input type="email">
-            </div>
-            <a href="#" class="btn sub_btn">Subscribe Now</a>
-        </section>
-
-
-
-
-        <!-- -------- Footer Section -------- -->
-        <section class="footer">
-            <div class="footer_container">
-                <div class=" col col_1">
-                    <p><span>ADDRESS : </span>Chișinău</p>
-                    <p><span>TELEPHONE : </span>+373 76540930</p>
-                    <p><span>EMAIL : </span>BattleGear@gmail.com</p>
-                </div>
-                <div class="col col_2">
-                    <h4 class="heading">MENU</h4>
-                    <P>Home</P>
-                    <P>About</P>
-                    <P>Services</P>
-                    <P>Contact</P>
-                </div>
-                <div class="col col_3">
-                    <h4 class="heading">ACCOUNT</h4>
-                    <P>Login</P>
-                    <P>Register</P>
-                    <P>Shopping</P>
-                </div>
-            </div>
-        </section>
-    </body>
+  <!--Footer-->
+  <section class="footer">
+    <div class="footer_container">
+      <div class="col col_1">
+        <p><span>ADDRESS : </span>Chișinău</p>
+        <p><span>TELEPHONE : </span>+373 76540930</p>
+        <p><span>EMAIL : </span>BattleGear@gmail.com</p>
+      </div>
+      <div class="col col_2">
+        <h4 class="heading">MENU</h4>
+        <p>Home</p>
+        <p>About</p>
+        <p>Services</p>
+        <p>Contact</p>
+      </div>
+      <div class="col col_3">
+        <h4 class="heading">ACCOUNT</h4>
+        <p><a href="file:///C:/Users/user/Desktop/ziua1/Login/login.html">Log in</a></p>
+        <p><a href="file:///C:/Users/user/Desktop/ziua1/register/register.html#Log%20out">Register</a></p>
+        <p><a href="file:///C:/Users/user/Desktop/ziua1/logout/logout.html">Log out</a></p>
+        <p>Shopping</p>
+      </div>
+    </div>
+  </section>
+</body>
 
 </html>

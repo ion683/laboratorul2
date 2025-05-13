@@ -1,4 +1,11 @@
-body {
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout | ZIUAI</title>
+    <style>
+        body {
     font-family: 'Arial', sans-serif;
     background: #f6f6fc;
     display: flex;
@@ -7,35 +14,6 @@ body {
     height: 100vh;
     margin: 0;
 }
-
-.navbar {
-    overflow: hidden;
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-  
-  .navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  .navbar a:hover {
-    background: #ddd;
-    color: black;
-  }
-  
-  .main {
-    padding: 16px;
-    margin-top: 30px;
-    height: 1500px;
-  }
 .container {
     background: white;
     padding: 2rem 3rem;
@@ -70,3 +48,24 @@ p {
 .btn-login:hover {
     background-color: #333;
 }
+
+    </style>
+</head>
+<body>
+    
+    <div id="navbar"></div>
+    <script>
+      fetch('../components/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar').innerHTML = data;
+        })
+        .catch(error => console.error('Eroare la încărcarea navbar-ului:', error));
+    </script>
+    <div class="container">
+        <h1>Te-ai delogat cu succes!</h1>
+        <p>Ne pare bine că ai fost alături de noi.</p>
+      
+    </div>
+</body>
+</html>

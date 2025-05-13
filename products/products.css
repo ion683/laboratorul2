@@ -1,7 +1,4 @@
-/* Font Name - Poppins ( Link in Description ) */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-/* Font Name - Merienda ( Link in Description ) */
-@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;500;600;700&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -15,54 +12,6 @@
     --font-color : #0c0c0c;
     --Bg-Color : #f8f8f8;
 }
-
-
-/* -------- Navbar CSS -------- */
-.navbar{
-    width: 100%;
-    height: 90px;
-    /* background-color: cyan; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 10%;
-    position: sticky;
-}
-.navbar .logo img{
-    cursor: pointer;
-}
-.navbar .navlinks{
-    display: flex;
-    align-items: center;
-}
-.navbar .navlinks li{
-    list-style: none;
-    margin: 0 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.navbar .navlinks li a{
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    text-decoration: none;
-    color: var(--sc-Color);
-    transition: all .5s ease;
-}
-.navbar .navlinks li a:hover,
-.navbar .navlinks li ion-icon:hover{
-    color: var(--pr-color);
-}
-.navbar .navlinks li ion-icon{
-    font-size: 19px;
-    color: var(--sc-Color);
-    cursor: pointer;
-    transition: all .5s ease;
-}
-
-
-
 /* -------- Home Section CSS -------- */
 
 .home_section{
@@ -368,7 +317,7 @@
 }
 
 
-/* -------- Footer Section CSS -------- */
+/* Footer Section CSS -------- */
 
 .footer{
     width: 100%;
@@ -424,21 +373,6 @@
     background-color: var(--font-color);
     color: #fff;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* --------- Contact Us Page Css -------- */
 
 .contact_heading_box{
