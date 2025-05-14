@@ -3,7 +3,8 @@
 <div class="navbar">
     <ul class="navlinks">
         <li><a href="http://127.0.0.1:5501/products/products.html">Initial page </a></li>
-        <li><a href="#products">Products</a></li>
+        <button onclick="document.getElementById('section2').scrollIntoView({ behavior: 'smooth' });">
+            Products </button>
         <li><a href="../Login/login.html">Log in</a></li>
         <li><a href="../logout/logout.html">Log out</a></li>
         <li><a href="../register/register.html">Register</a></li>
@@ -22,7 +23,7 @@
     top: 0;
     left: 0;
     z-index: 999;
-    background-color: rgb(112, 112, 113);
+    background-color: var(--pr-color);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 .navbar .logo img {
@@ -46,4 +47,6 @@
 .navbar .navlinks li a:hover {
     color: #f0c040;
 }
+
+
 </style>

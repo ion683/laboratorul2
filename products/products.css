@@ -11,12 +11,49 @@
     --sc-Color : #002c3e;
     --font-color : #0c0c0c;
     --Bg-Color : #f8f8f8;
-    background-image: url(samurai.jpg);
+    background-image: url(../images/jora.jpg);
     background-size: cover;
 
 }
 /* -------- Home Section CSS -------- */
 
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    margin-top: 102px;
+  }
+  
+  #searchInput {
+    width: 100%;
+    max-width: 400px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #d61616;
+    color: #333;
+  }
+  
+  #searchInput::placeholder {
+    color: #000000;
+  }
+  
+  #searchInput:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px #3498db40;
+    background-color: #f9f9f9;
+  }
+  
+  .catalog {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
 .home_section{
     width: 100%;
     height: 85vh;
