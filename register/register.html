@@ -75,16 +75,6 @@ a:hover {
           document.getElementById('navbar').innerHTML = data;
         })
         .catch(error => console.error('Eroare la încărcarea navbar-ului:', error));
-
-       document.getElementById('formInregistrare').addEventListener('submit', function(e) {
-    e.preventDefault(); // prevenim trimiterea normală a formularului
-    if (this.checkValidity()) {
-      // Redirecționare către products.html
-      window.location.href = "http://127.0.0.1:5501/products/products.html";
-    } else {
-      this.reportValidity(); // arată erorile în browser
-    }
-  });
       </script>
       
     <div class="container">
