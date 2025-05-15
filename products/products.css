@@ -299,6 +299,7 @@
 .product_card .buttons .buy_now{
     background-color: var(--sc-Color);
     border: 1px solid var(--sc-Color);
+    
 }
 .product_card .buttons .buy_now:hover{
     color: var(--sc-Color);

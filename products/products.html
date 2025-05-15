@@ -10,23 +10,7 @@
 </head>
 
 <body>
-  <div id="navbar"></div>
-  <script>
-    fetch('../components/navbar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navbar').innerHTML = data;
-      })
-      .catch(error => console.error('Eroare la încărcarea navbar-ului:', error));
-  </script>
-  <div class="search-container">
-    <input type="text" id="searchInput" placeholder="Caută produs..." />
-  </div>
-
   
-
-  <div class="catalog" id="catalog">
-    <script src="bara.js"></script>
   <section class="new_arrival">
     <div class="arrival_container">
         <h3 class="heading">#NewArrivals</h3>
@@ -59,23 +43,41 @@
     </div>
   </section>
 
-  <!-- -------- Our Products Section -------- -->
   <section class="our_products" id="products">
     <h3 class="product_heading head_text">Our <span>Products</span></h3>
+    <div id="navbar"></div>
+  <script>
+    fetch('../components/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      })
+      .catch(error => console.error('Eroare la încărcarea navbar-ului:', error));
+  </script>
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Caută produs..." />
+  </div>
+
+  <div class="catalog" id="catalog">
+    <script src="bara.js"></script>
     <div id="section2">
         </div>
+
     <div class="products_container">
         <div class="product_card">
             <div class="img">
                 <img src="https://cdn.webshopapp.com/shops/16221/files/476433898/1400x1867x3/venum-venum-training-camp-40-muay-thai-short-black.jpg" width="140px">
             </div>
             <div class="details">
-                <p class="name">Men's Shirt</p>
-                <p class="price">$75</p>
+                <p class="name">Venum Training Camp 4.0 </p>
+                <p class="price">58,33 €</p>
             </div>
             <div class="buttons">
-                <a href="#" class="addTO_cart">Add To Cart</a>
-                <a href="#" class="buy_now">Buy Now</a>
+                <a href="https://ch.venum.com/collections/shorts-men/products/venum-training-camp-4-0-muay-thai-shorts-schwarz-neongrun" class="buy_now">Buy Now</a>
+                <a href="#" class="addTO_cart">L</a>
+                <a href="#" class="addTO_cart">XL</a>
+                <a href="#" class="addTO_cart">XXL</a>
+                
             </div>
         </div>
         <div class="product_card">
@@ -87,11 +89,10 @@
                 <p class="price">119,99€</p>
             </div>
             <div class="buttons">
-                <a href="#" class="buy_now">Buy Now</a>
-                <button class="button1">M</button>
-                <button class="button2">L</button>
-                <button class="button3">XL</button>
-                
+                <a href="https://www.venum.com/collections/venum-tactical-xt/products/venum-tactical-xt-shinguards-black-fire-red?srsltid=AfmBOopSWWMFVK2VLKNzGrzd4OZTQtPREOJ4zT4WrrtP6HdhkN2_pqNe" class="buy_now">Buy Now</a>
+                <a href="#" class="addTO_cart">M</a>
+                <a href="#" class="addTO_cart">L</a>
+                <a href="#" class="addTO_cart">XL</a>
             </div>
         </div>
         <div class="product_card">
@@ -103,8 +104,10 @@
                 <p class="price">26,99€</p>
             </div>
             <div class="buttons">
-                <a href="#" class="addTO_cart">Add To Cart</a>
-                <a href="#" class="buy_now">Buy Now</a>
+                <a href="https://row.venum.com/products/venum-kontact-shin-guards-black-gold" class="buy_now">Buy Now</a>
+                <a href="#" class="addTO_cart">M</a>
+                <a href="#" class="addTO_cart">L</a>
+                <a href="#" class="addTO_cart">XL</a>
             </div>
         </div>
         <div class="product_card">
@@ -113,11 +116,10 @@
             </div>
             <div class="details">
                 <p class="name">Fairtex AS1 Ankle Guard Support Protector</p>
-                <p class="price">25€</p>
+                <p class="price">35.89€</p>
             </div>
             <div class="buttons">
-                <a href="#" class="addTO_cart">Add To Cart</a>
-                <a href="#" class="buy_now">Buy Now</a>
+                <a href="https://www.ebay.com/itm/225595045475" class="buy_now">Buy Now</a>
             </div>
         </div>
         <div class="product_card">
@@ -129,8 +131,7 @@
                 <p class="price">55€</p>
             </div>
             <div class="buttons">
-                <a href="#" class="addTO_cart">Add To Cart</a>
-                <a href="#" class="buy_now">Buy Now</a>
+                <a href="https://fightshop.md/product/geanta-rucsac-berserk-pixel-negru/" class="buy_now">Buy Now</a>
             </div>
         </div>
         <div class="product_card">
@@ -142,8 +143,9 @@
                 <p class="price">36€</p>
             </div>
             <div class="buttons">
-                <a href="#" class="addTO_cart">Add To Cart</a>
-                <a href="#" class="buy_now">Buy Now</a>
+                <a href="https://fightshop.md/product/manusi-pentru-lupta-corp-la-corp-fairtex-piele/" class="buy_now">Buy Now</a>
+                <a href="#" class="addTO_cart">10 O.Z</a>
+                <a href="#" class="addTO_cart">12 O.Z</a>
             </div>
         </div>
         <div class="product_card">
@@ -155,8 +157,7 @@
                 <p class="price">12.76€</p>
             </div>
             <div class="buttons">
-                <a href="#" class="addTO_cart">Add To Cart</a>
-                <a href="#" class="buy_now">Buy Now</a>
+                <a href="https://fightshop.md/product/coarda-crossfit-zelart-negru/" class="buy_now">Buy Now</a>
             </div>
         </div>
         <div class="product_card">
@@ -168,8 +169,10 @@
                 <p class="price">49€</p>
             </div>
             <div class="buttons">
-                <a href="#" class="addTO_cart">Add To Cart</a>
-                <a href="#" class="buy_now">Buy Now</a>
+                <a href="https://fightshop.md/product/training-mask-3-0-phantom/" class="buy_now">Buy Now</a>
+                <a href="#" class="addTO_cart">S</a>
+                <a href="#" class="addTO_cart">M</a>
+                <a href="#" class="addTO_cart">L</a>
             </div>
         </div>
         <div class="product_card">
@@ -181,54 +184,10 @@
                 <p class="price">7.69€</p>
             </div>
             <div class="buttons">
-                <a href="#" class="addTO_cart">Add To Cart</a>
+                <a href="https://fightshop.md/product/fight-ball-cauciuc-zelart/" class="addTO_cart">Add To Cart</a>
                 <a href="#" class="buy_now">Buy Now</a>
             </div>
         </div>
-
-
-        
-        <div class="product_card">
-            <div class="img">
-                <img src="../img/p10.png" width="140px">
-            </div>
-            <div class="details">
-                <p class="name">Men's Shirt</p>
-                <p class="price">$75</p>
-            </div>
-            <div class="buttons">
-                <a href="#" class="addTO_cart">Add To Cart</a>
-                <a href="#" class="buy_now">Buy Now</a>
-            </div>
-        </div>
-        <div class="product_card">
-            <div class="img">
-                <img src="../img/p11.png" width="140px">
-            </div>
-            <div class="details">
-                <p class="name">Men's Shirt</p>
-                <p class="price">$75</p>
-            </div>
-            <div class="buttons">
-                <a href="#" class="addTO_cart">Add To Cart</a>
-                <a href="#" class="buy_now">Buy Now</a>
-            </div>
-        </div>
-        <div class="product_card">
-            <div class="img">
-                <img src="../img/p12.png" width="140px">
-            </div>
-            <div class="details">
-                <p class="name">Women's Dress</p>
-                <p class="price">$75</p>
-            </div>
-            <div class="buttons">
-                <a href="#" class="addTO_cart">Add To Cart</a>
-                <a href="#" class="buy_now">Buy Now</a>
-            </div>
-        </div>
-    </div>
-    <a href="./product.html" class="view_allButton btn">View All</a>
 </section>
 
   <!--Footer-->
@@ -248,9 +207,9 @@
       </div>
       <div class="col col_3">
         <h4 class="heading">ACCOUNT</h4>
-        <p><a href="file:///C:/Users/user/Desktop/ziua1/Login/login.html">Log in</a></p>
-        <p><a href="file:///C:/Users/user/Desktop/ziua1/register/register.html#Log%20out">Register</a></p>
-        <p><a href="file:///C:/Users/user/Desktop/ziua1/logout/logout.html">Log out</a></p>
+        <p><a href="../login/login.html">Log in</a></p>
+        <p><a href="../register/register.html">Register</a></p>
+        <p><a href="../logout/logout.html">Log out</a></p>
         <p>Shopping</p>
       </div>
     </div>
@@ -278,8 +237,6 @@
     
           if (matches) anyVisible = true;
         });
-    
-        // Scroll doar dacă se găsește ceva și nu am mai scrollat deja
         if (filter.length > 0 && anyVisible && !hasScrolled) {
           productsSection.scrollIntoView({ behavior: 'smooth' });
           hasScrolled = true;
@@ -287,10 +244,6 @@
       });
     });
     </script>
-    
-    
-
 
 </body>
-
 </html>
