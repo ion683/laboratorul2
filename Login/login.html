@@ -4,123 +4,146 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logare | ZIUAI</title>
-   <style>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
-    body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background: #f6f6fc;
-}
+        .container {
+            padding: 2rem;
+            border-radius: 17px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
 
-.container {
-    background: white;
-    padding: 2rem;
-    border-radius: 17px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    width: 350px;
-    text-align: center;
-    
-    
+        h1 {
+            color: #333;
+            margin-bottom: 2rem;
+        }
 
-}
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
 
-h1 {
-    color: #333;
-    margin-bottom: 2rem;
-}
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #555;
+            font-weight: bold;
+        }
 
-.form-group {
-    margin-bottom: 1.5rem;
-    text-align: left;
-}
+        input[type="password"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
 
-label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #555;
-    font-weight: bold;
-}
-input[type="password"],
-input[type="tel"] {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 16px;
-    box-sizing: border-box;
-}
+        .btn-login {
+            width: 100%;
+            padding: 12px;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: not-allowed;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+            background-color: #000;
+            opacity: 0.5;
+        }
 
+        .btn-login.enabled {
+            cursor: pointer;
+            opacity: 1;
+        }
 
-.btn-login {
-    width: 100%;
-    padding: 12px;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 10px;
-}
+        .btn-login.enabled:hover {
+            background-color: #333;
+        }
 
-.btn-black {
-    background-color: #000;
-}
+        .register-link {
+            margin-top: 1.5rem;
+            color: #666;
+        }
 
-.btn-black:hover {
-    background-color: #333;
-}
+        .register-link a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-.register-link {
-    margin-top: 1.5rem;
-    color: #666;
-}
-
-.register-link a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.register-link a:hover {
-    text-decoration: underline;
-}
-
-   </style>
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    
-    <div id="navbar"></div>
-    <script>
-      fetch('../components/navbar.html')
+
+<div id="navbar"></div>
+<script>
+    fetch('../components/navbar.html')
         .then(response => response.text())
         .then(data => {
-          document.getElementById('navbar').innerHTML = data;
+            document.getElementById('navbar').innerHTML = data;
         })
         .catch(error => console.error('Eroare la încărcarea navbar-ului:', error));
-    </script>
+</script>
 
-    <div class="container">
-        <h1>Logare</h1>
-        <form action="/login" method="POST">
-            <div class="form-group">
-                <label for="telefon">Număr de telefon:</label>
-                <input type="tel" placeholder="Număr de telefon" pattern="373[67][0-9]{7}" title="Numărul trebuie să înceapă cu 3736 sau 3737 și să conțină 9 cifre în total" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Parolă:</label>
-                <input type="password" id="password" placeholder="Parolă"
-                pattern="(?=.*[A-Z])(?=.*\d).{6,}"
-                title="Parola trebuie să conțină cel puțin o literă mare, o cifră și să aibă cel puțin 6 caractere"
-                required>
-            </div>
-            <button type="submit" class="btn-login btn-black">  Conectează-te </button>
-        </form>
-    </div>
+<div class="container">
+    <h1>Logare</h1>
+    <form id="loginForm">
+        <div class="form-group">
+            <label for="telefon">Număr de telefon:</label>
+            <input type="tel" id="telefon" placeholder="Număr de telefon"
+                   pattern="373[67][0-9]{7}"
+                   title="Numărul trebuie să înceapă cu 3736 sau 3737 și să conțină 9 cifre în total"
+                   required>
+        </div>
+        <div class="form-group">
+            <label for="parola">Parolă:</label>
+            <input type="password" id="parola" placeholder="Parolă"
+                   pattern="(?=.*[A-Z])(?=.*\d).{6,}"
+                   title="Parola trebuie să conțină cel puțin o literă mare, o cifră și să aibă cel puțin 6 caractere"
+                   required>
+        </div>
+        <button type="submit" id="btnLogin" class="btn-login">Conectează-te</button>
+    </form>
+</div>
+
+<script>
+    const form = document.getElementById('loginForm');
+    const telefon = document.getElementById('telefon');
+    const parola = document.getElementById('parola');
+    const btnLogin = document.getElementById('btnLogin');
+
+    function validateForm() {
+        const valid = telefon.checkValidity() && parola.checkValidity();
+        btnLogin.disabled = !valid;
+        btnLogin.classList.toggle('enabled', valid);
+    }
+
+    telefon.addEventListener('input', validateForm);
+    parola.addEventListener('input', validateForm);
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (form.checkValidity()) {
+            window.location.href = 'http://127.0.0.1:5501/products/products.html';
+        }
+    });
+</script>
+
 </body>
 </html>

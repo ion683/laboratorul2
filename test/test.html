@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    test
+</head>
+<script>
+    function toLight() {
+  document.body.classList.remove('dark');
+  document.body.classList.add('light');
+}
+
+function toDark() {
+  document.body.classList.remove('light');
+  document.body.classList.add('dark');
+}
+</script>
+<style>
+    .light {
+  --font-color: #111;
+  --bg-color: #fff;
+}
+
+.dark {
+  --font-color: #eee;
+  --bg-color: #111;
+}
+
+p, h1 {
+  color: var(--font-color);
+}
+
+body {
+  background-color: var(--bg-color);
+}
+</style>
+<body class="light">
+    <h1>title</h1>
+    <p>text blah blah</p>
+    
+    <button onclick="toDark()">switch to dark</button>
+    <button onclick="toLight()">switch to light</button>
+  
+
+</body>

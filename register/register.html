@@ -6,7 +6,6 @@
     <title>Înregistrare | ZIUAI</title>
     <link rel="stylesheet" href="register.css">
     <style>
-        
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
@@ -47,12 +46,19 @@ input {
     color: white;
     border: none;
     border-radius: 4px;
-    cursor: pointer;
+    cursor: not-allowed;
     font-size: 1rem;
     margin-top: 1rem;
+    opacity: 0.5;
+    transition: 0.3s ease;
 }
 
-button:hover {
+.submit1.enabled {
+    cursor: pointer;
+    opacity: 1;
+}
+
+button:hover.enabled {
     background-color: #0056b3;
 }
 
@@ -75,20 +81,46 @@ a:hover {
           document.getElementById('navbar').innerHTML = data;
         })
         .catch(error => console.error('Eroare la încărcarea navbar-ului:', error));
-      </script>
+    </script>
       
     <div class="container">
         <h1>Înregistrare</h1>
         <form id="formInregistrare">
-            <input type="text" placeholder="Nume" required>
-            <input type="text" placeholder="Prenume" required>
-            <input type="tel" placeholder="Număr de telefon" pattern="373[67][0-9]{7}" required>
-            <input type="password" placeholder="Parolă" pattern="(?=.*[A-Z])(?=.*\d).{6,}" required>
-            <button class="submit1" type="submit">Înregistrează-te</button>
-          </form>
-</form>
-
-     
+            <input type="text" id="nume" placeholder="Nume" required>
+            <input type="text" id="prenume" placeholder="Prenume" required>
+            <input type="tel" id="telefon" placeholder="Număr de telefon" pattern="373[67][0-9]{7}" required>
+            <input type="password" id="parola" placeholder="Parolă" pattern="(?=.*[A-Z])(?=.*\d).{6,}" required>
+            <button class="submit1" type="submit" id="btnSubmit" disabled>Înregistrează-te</button>
+        </form>
     </div>
+
+    <script>
+    const form = document.getElementById('formInregistrare');
+    const inputs = form.querySelectorAll('input');
+    const btnSubmit = document.getElementById('btnSubmit');
+
+    function validateForm() {
+        let valid = true;
+        inputs.forEach(input => {
+            if (!input.checkValidity()) {
+                valid = false;
+            }
+        });
+
+        btnSubmit.disabled = !valid;
+        btnSubmit.classList.toggle('enabled', valid);
+    }
+
+    inputs.forEach(input => {
+        input.addEventListener('input', validateForm);
+    });
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault(); 
+        if (form.checkValidity()) {
+            window.location.href = 'http://127.0.0.1:5501/Login/login.html';
+        }
+    });
+    </script>
 </body>
 </html>
