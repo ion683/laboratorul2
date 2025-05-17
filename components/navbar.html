@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
+    <body class="light">
 <div class="navbar">
     <ul class="navlinks">
-        <li><a href="http://127.0.0.1:5501/products/products.html">Initial page </a></li>
+        <li><a href="../pricipal page/principal.html">Initial Page</a></li>
+        <li><a href="http://127.0.0.1:5501/products/products.html">Products </a></li>
         <button class="button" onclick="document.getElementById('section2').scrollIntoView({ behavior: 'smooth' });">
-            Products </button>
+            Shop Now </button>
         <li><a href="../Login/login.html">Log in</a></li>
         <li><a href="../logout/logout.html">Log out</a></li>
         <li><a href="../register/register.html">Register</a></li>
+        <li><button onclick="toDark()">switch to dark</button>
+        <li><button onclick="toLight()">switch to light</button></li>
     </ul>
 </div>
 
@@ -59,6 +63,24 @@
 .navbar .navlinks li a:hover {
     color: #f0c040;
 }
+.light {
+  --font-color: Black;
+  --bg-color: white;
+}
 
+.dark {
+  --font-color: white;
+  --bg-color: black;
+}
+
+p, h1 {
+  color: var(--font-color);
+}
+
+body {
+  background-color: var(--bg-color);
+}
 
 </style>
+
+    </body>
