@@ -3,13 +3,14 @@
     <body class="light">
 <div class="navbar">
     <ul class="navlinks">
+
         <li><a href="../pricipal page/principal.html">Initial Page</a></li>
         <li><a href="http://127.0.0.1:5501/products/products.html">Products </a></li>
         <button class="button" onclick="document.getElementById('section2').scrollIntoView({ behavior: 'smooth' });">
             Shop Now </button>
-        <li><a href="../Login/login.html">Log in</a></li>
-        <li><a href="../logout/logout.html">Log out</a></li>
-        <li><a href="../register/register.html">Register</a></li>
+        <li id="nav-login"><a href="../Login/login.html">Log in</a></li>
+        <li id="nav-logout"><a href="../logout/logout.html">Log out</a></li>
+        <li id="nav-register"><a href="../register/register.html">Register</a></li>
         <li><button onclick="toDark()">switch to dark</button>
         <li><button onclick="toLight()">switch to light</button></li>
     </ul>
@@ -65,10 +66,12 @@
 }
 .light {
   --bg-color: white;
+  --font-color: Black;
 }
 
 .dark {
   --bg-color: black;
+  --font-color: white;
 }
 
 p, h1 {

@@ -7,40 +7,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BattleGear</title>
   <link rel="stylesheet" href="products.css">
-  <script src="index.js"></script>
-
+  <script defer src="index.js"></script>
 </head>
 
 <body>
-  
   <section class="new_arrival">
     <div class="arrival_container">
-        <h3 class="heading">#NewArrivals</h3>
-        <p style="color: rgb(145, 76, 76);"> Our mission is to become the go-to store for customers who are looking for high quality mma,k1,boxing
-            products. With our products being affordable and highly accessible, we believe that we can help our
-            customers create and express their own style</p>
-        <a href="#products" class="btn arrival_btn">Shop Now</a>
+      <h3 class="heading">#NewArrivals</h3>
+      <p style="color: rgb(145, 76, 76);">
+        Our mission is to become the go-to store for customers who are looking for high quality MMA, K1, boxing products.
+        With our products being affordable and highly accessible, we believe that we can help our customers create and
+        express their own style.
+      </p>
+      <a href="#products" class="btn arrival_btn">Shop Now</a>
     </div>
-</section>
+  </section>
 
   <section class="poster">
-    
     <h3 class="poster_heading head_text">Why Shop with Us</h3>
     <div class="poster_wrapper">
       <div class="poster_card">
         <img src="../images/quality.png.png" class="icon">
         <h4>Free Delivery</h4>
-        <p>Free Delivery will give to Our Customer</p>
+        <p>Free Delivery will be given to our customers</p>
       </div>
       <div class="poster_card">
         <img src="../images/car.png.png" class="icon">
         <h4>Free Shipping</h4>
-        <p>Free Shipping will give to Our Customer</p>
+        <p>Free Shipping for all orders</p>
       </div>
       <div class="poster_card">
         <img src="../images/car1.png.png" class="icon">
         <h4>Best Quality</h4>
-        <p>You will get Best Quality Products</p>
+        <p>You will get best quality products</p>
       </div>
     </div>
   </section>
@@ -48,164 +47,29 @@
   <section class="our_products" id="products">
     <h3 class="product_heading head_text">Our <span>Products</span></h3>
     <div id="navbar"></div>
-  <script>
-    fetch('../components/navbar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navbar').innerHTML = data;
-      })
-      .catch(error => console.error('Eroare la încărcarea navbar-ului:', error));
-  </script>
-  <div class="search-container">
-    <input type="text" id="searchInput" placeholder="Caută produs..." />
+    <script>
+      fetch('../components/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading navbar:', error));
+    </script>
 
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search product..." />
+    </div>
 
-    
-  </div>
+    <div class="products_container" id="productsContainer">
+      <!-- Products will be injected by JavaScript -->
+    </div>
 
-  <div class="catalog" id="catalog">
-    <script src="bara.js"></script>
-    <div id="section2">
-        </div>
-
-        <div class="products_container" id="productsContainer">
-
-
-        <div class="product_card">
-            <div class="img">
-                <img src="https://cdn.webshopapp.com/shops/16221/files/476433898/1400x1867x3/venum-venum-training-camp-40-muay-thai-short-black.jpg" width="140px">
-            </div>
-            <div class="details">
-                <p class="name">Venum Training Camp 4.0 </p>
-                <p class="price">58,33 €</p>
-            </div>
-            <div class="buttons">
-                <a href="https://ch.venum.com/collections/shorts-men/products/venum-training-camp-4-0-muay-thai-shorts-schwarz-neongrun" class="buy_now">Buy Now</a>
-                <a href="#" class="addTO_cart">L</a>
-                <a href="#" class="addTO_cart">XL</a>
-                <a href="#" class="addTO_cart">XXL</a>
-                
-            </div>
-        </div>
-        <div class="product_card">
-            <div class="img">
-                <img src="https://eu.venum.com/cdn/shop/files/2f27c85157a6226795a52c76dcb21cf5fc7d4828_VENUM_05537_100_2.jpg?v=1745252137" width="140px">
-            </div>
-            <div class="details">
-                <p class="name">Venum Tactical XT Shinguards - Black/Fire Red</p>
-                <p class="price">119,99€</p>
-            </div>
-            <div class="buttons">
-                <a href="https://www.venum.com/collections/venum-tactical-xt/products/venum-tactical-xt-shinguards-black-fire-red?srsltid=AfmBOopSWWMFVK2VLKNzGrzd4OZTQtPREOJ4zT4WrrtP6HdhkN2_pqNe" class="buy_now">Buy Now</a>
-                <a href="#" class="addTO_cart">M</a>
-                <a href="#" class="addTO_cart">L</a>
-                <a href="#" class="addTO_cart">XL</a>
-            </div>
-        </div>
-        <div class="product_card">
-            <div class="img">
-                <img src="https://eu.venum.com/cdn/shop/files/d90d2ff13c3d5c86a2d87adafb0a98896370d464_VENUM_0480_126_1.jpg?v=1743518514" width="140px">
-            </div>
-            <div class="details">
-                <p class="name">Venum Kontact Shin Guards</p>
-                <p class="price">26,99€</p>
-            </div>
-            <div class="buttons">
-                <a href="https://row.venum.com/products/venum-kontact-shin-guards-black-gold" class="buy_now">Buy Now</a>
-                <a href="#" class="addTO_cart">M</a>
-                <a href="#" class="addTO_cart">L</a>
-                <a href="#" class="addTO_cart">XL</a>
-            </div>
-        </div>
-        <div class="product_card">
-            <div class="img">
-                <img src="https://fight.shop/cdn/shop/files/fairtex-as1-ankle-guard-support-protectorankle-supportfairtexblackredfightshop-561306.webp?format=jpg&v=1727166489&width=1800" width="140px">
-            </div>
-            <div class="details">
-                <p class="name">Fairtex AS1 Ankle Guard Support Protector</p>
-                <p class="price">35.89€</p>
-            </div>
-            <div class="buttons">
-                <a href="https://www.ebay.com/itm/225595045475" class="buy_now">Buy Now</a>
-            </div>
-        </div>
-        <div class="product_card">
-            <div class="img">
-                <img src="https://fightshop.md/wp-content/uploads/2024/12/DF2A6985-scaled.jpg" width="140px">
-            </div>
-            <div class="details">
-                <p class="name">Berserk Pixel Bag/Backpack Black</p>
-                <p class="price">55€</p>
-            </div>
-            <div class="buttons">
-                <a href="https://fightshop.md/product/geanta-rucsac-berserk-pixel-negru/" class="buy_now">Buy Now</a>
-            </div>
-        </div>
-        <div class="product_card">
-            <div class="img">
-                <img src="https://fightshop.md/wp-content/uploads/2024/03/57441552-5a0d-11e9-9ca7-305a3a7701f3-00000146301.jpg" width="140px">
-            </div>
-            <div class="details">
-                <p class="name">Twins Leather Hand-to-Hand Fighting Gloves</p>
-                <p class="price">36€</p>
-            </div>
-            <div class="buttons">
-                <a href="https://fightshop.md/product/manusi-pentru-lupta-corp-la-corp-fairtex-piele/" class="buy_now">Buy Now</a>
-                <a href="#" class="addTO_cart">10 O.Z</a>
-                <a href="#" class="addTO_cart">12 O.Z</a>
-            </div>
-        </div>
-        <div class="product_card">
-            <div class="img">
-                <img src="https://fightshop.md/wp-content/uploads/2024/03/bc64933c-1ce8-11eb-a279-004e01b064a700.jpg" width="140px">
-            </div>
-            <div class="details">
-                <p class="name">Crossfit Rope Zelart Black</p>
-                <p class="price">12.76€</p>
-            </div>
-            <div class="buttons">
-                <a href="https://fightshop.md/product/coarda-crossfit-zelart-negru/" class="buy_now">Buy Now</a>
-            </div>
-        </div>
-        <div class="product_card">
-            <div class="img">
-                <img src="https://fightshop.md/wp-content/uploads/2024/03/eb67d9fe-58ea-11e8-9957-305a3a7701f300.jpg" width="140px">
-            </div>
-            <div class="details">
-                <p class="name">TRAINING MASK 3.0 PHANTOM</p>
-                <p class="price">49€</p>
-            </div>
-            <div class="buttons">
-                <a href="https://fightshop.md/product/training-mask-3-0-phantom/" class="buy_now">Buy Now</a>
-                <a href="#" class="addTO_cart">S</a>
-                <a href="#" class="addTO_cart">M</a>
-                <a href="#" class="addTO_cart">L</a>
-            </div>
-        </div>
-        <div class="product_card">
-            <div class="img">
-                <img src="https://fightshop.md/wp-content/uploads/2025/02/bb07fd69-fbf3-11e9-917b-305a3a7701f300.jpg" width="140px">
-            </div>
-            <div class="details">
-                <p class="name">Fight Ball Cauciuc Zelart</p>
-                <p class="price">7.69€</p>
-            </div>
-            <div class="buttons">
-                <a href="https://fightshop.md/product/fight-ball-cauciuc-zelart/" class="addTO_cart">Add To Cart</a>
-                <a href="#" class="buy_now">Buy Now</a>
-            </div>
-        </div>
-        <nav aria-label="Page navigation example">
-          <ul class="pagination justify-content-center">
-            <li class="page-item disabled">
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            </li>
-          </ul>
-        </nav>
-</section>
+    <nav aria-label="Page navigation" class="custom-pagination-nav">
+      <ul class="pagination" id="pagination">
+        <!-- Pagination buttons will be injected by JavaScript -->
+      </ul>
+    </nav>
+  </section>
 
   <section class="footer">
     <div class="footer_container">
@@ -234,32 +98,157 @@
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const searchInput = document.getElementById('searchInput');
-      const products = document.querySelectorAll('.product_card');
-      const productsSection = document.getElementById('products');
+      const productsContainer = document.getElementById('productsContainer');
+      const pagination = document.getElementById('pagination');
+      const productsPerPage = 3;
+      let currentPage = 1;
+      let products = [];
+
+      const productData = [
+  {
+    name: "Venum Training Camp 4.0",
+    img: "https://cdn.webshopapp.com/shops/16221/files/476433898/1400x1867x3/venum-venum-training-camp-40-muay-thai-short-black.jpg",
+    price: "58,33 €",
+    buyLink: "https://ch.venum.com/collections/shorts-men/products/venum-training-camp-4-0-muay-thai-shorts-schwarz-neongrun",
+    sizes: ["L", "XL", "XXL"]
+  },
+  {
+    name: "Venum Tactical XT Shinguards",
+    img: "https://eu.venum.com/cdn/shop/files/2f27c85157a6226795a52c76dcb21cf5fc7d4828_VENUM_05537_100_2.jpg?v=1745252137",
+    price: "119,99€",
+    buyLink: "https://www.venum.com/collections/venum-tactical-xt/products/venum-tactical-xt-shinguards-black-fire-red?srsltid=AfmBOopSWWMFVK2VLKNzGrzd4OZTQtPREOJ4zT4WrrtP6HdhkN2_pqNe",
+    sizes: ["M", "L", "XL"]
+  },
+  {
+    name: "Fairtex AS1 Ankle Guard Support Protector",
+    img: "https://fight.shop/cdn/shop/files/fairtex-as1-ankle-guard-support-protectorankle-supportfairtexblackredfightshop-561306.webp?format=jpg&v=1727166489&width=1800",
+    price: "35.89€",
+    buyLink: "https://www.ebay.com/itm/225595045475"
     
-      let hasScrolled = false;
+  },
+  {
+    name:"Berserk Pixel Bag/Backpack Black",
+    img: "https://fightshop.md/wp-content/uploads/2024/12/DF2A6985-scaled.jpg",
+    price: "55€",
+    buyLink: "https://fightshop.md/product/geanta-rucsac-berserk-pixel-negru/"
+  },
+  {
+    name: "Venum Kontact Shin Guards",
+    img: "https://eu.venum.com/cdn/shop/files/d90d2ff13c3d5c86a2d87adafb0a98896370d464_VENUM_0480_126_1.jpg?v=1743518514",
+    price: "26,99€",
+    buyLink: "https://row.venum.com/products/venum-kontact-shin-guards-black-gold",
+    sizes: ["M", "L", "XL"]
+  },
+  {
+    name: "Twins Leather Hand-to-Hand Fighting Gloves",
+    img: "https://fightshop.md/wp-content/uploads/2024/03/57441552-5a0d-11e9-9ca7-305a3a7701f3-00000146301.jpg",
+    price: "36€",
+    buyLink: "https://fightshop.md/product/manusi-pentru-lupta-corp-la-corp-fairtex-piele/",
+    sizes: ["10 O.Z", "12 O.Z", ]
+  },
+  {
+    name: "Crossfit Rope Zelart Black",
+    img: "https://fightshop.md/wp-content/uploads/2024/03/bc64933c-1ce8-11eb-a279-004e01b064a700.jpg",
+    price: "12.76€",
+    buyLink: "https://fightshop.md/product/coarda-crossfit-zelart-negru/",
+  },
+  {
+    name: "TRAINING MASK 3.0 PHANTOM",
+    img: "https://fightshop.md/wp-content/uploads/2024/03/eb67d9fe-58ea-11e8-9957-305a3a7701f300.jpg",
+    price: "49€",
+    buyLink: "https://fightshop.md/product/training-mask-3-0-phantom/",
+  },
+  {
+    name: "Asics Snapdown 4",
+    img: "https://fightshop.md/wp-content/uploads/2024/10/snap-2.jpg",
+    price: "100,99€",
+    buyLink: "https://fightshop.md/product/incaltaminte-lupte-asics-snapdown-4/",
+    sizes: ["Mărime 39-46"]
+  },
+  {
+    name: "Berserk Red Fighting Jersey",
+    img: "https://fightshop.md/wp-content/uploads/2024/03/photo_2023-11-30_13-17-52.jpg",
+    price: "42.99€",
+    buyLink: "https://fightshop.md/product/dres-lupte-berserk-moldova-rosu/",
+    sizes: ["M", "L", "XL"]
+  },
+  {
+    name: "Top King Bag",
+    img: "https://fightshop.md/wp-content/uploads/2024/03/953a3786-b305-11eb-9d0b-d45d64415ba4-00000123713.jpg",
+    price: "125.99€",
+    buyLink: "https://fightshop.md/product/geanta-top-king/",
+  },
+  {
+    name: "Fight Ball Cauciuc Zelart",
+    img: "https://fightshop.md/wp-content/uploads/2025/02/bb07fd69-fbf3-11e9-917b-305a3a7701f300.jpg",
+    price: "7.69€",
+    buyLink: "https://fightshop.md/product/fight-ball-cauciuc-zelart/",
+  },
+  
+];
+function renderProducts(page) {
+  productsContainer.innerHTML = '';
+  const start = (page - 1) * productsPerPage;
+  const end = start + productsPerPage;
+  const pageProducts = products.slice(start, end);
+
+  pageProducts.forEach(prod => {
+    const div = document.createElement('div');
+    div.className = 'product_card';
     
+    const sizesHtml = prod.sizes ? prod.sizes.map(size => 
+      `<a href="#" class="addTO_cart">${size}</a>`).join('') : '';
+
+    div.innerHTML = `
+      <div class="img">
+        <img src="${prod.img}" width="140px">
+      </div>
+      <div class="details">
+        <p class="name">${prod.name}</p>
+        <p class="price">${prod.price}</p>
+      </div>
+      <div class="buttons">
+        <a href="${prod.buyLink}" class="buy_now" target="_blank">Buy Now</a>
+        ${sizesHtml}
+      </div>
+    `;
+    productsContainer.appendChild(div);
+  });
+}
+
+
+      function renderPagination() {
+        pagination.innerHTML = '';
+        const pageCount = Math.ceil(products.length / productsPerPage);
+
+        for (let i = 1; i <= pageCount; i++) {
+          const li = document.createElement('li');
+          li.className = 'page-item';
+          li.innerHTML = `<a class="page-link" href="#">${i}</a>`;
+          if (i === currentPage) li.classList.add('active');
+          li.addEventListener('click', (e) => {
+            e.preventDefault();
+            currentPage = i;
+            renderProducts(currentPage);
+            renderPagination();
+          });
+          pagination.appendChild(li);
+        }
+      }
+
       searchInput.addEventListener('input', () => {
         const filter = searchInput.value.toLowerCase();
-    
-        let anyVisible = false;
-    
-        products.forEach(product => {
-          const nameElement = product.querySelector('.name');
-          const nameText = nameElement ? nameElement.innerText.toLowerCase() : '';
-    
-          const matches = nameText.includes(filter);
-          product.style.display = matches ? '' : 'none';
-    
-          if (matches) anyVisible = true;
-        });
-        if (filter.length > 0 && anyVisible && !hasScrolled) {
-          productsSection.scrollIntoView({ behavior: 'smooth' });
-          hasScrolled = true;
-        }
+        products = productData.filter(p => p.name.toLowerCase().includes(filter));
+        currentPage = 1;
+        renderProducts(currentPage);
+        renderPagination();
       });
-    });
-    </script>
 
+      products = [...productData];
+      renderProducts(currentPage);
+      renderPagination();
+    });
+  </script>
 </body>
+
 </html>
